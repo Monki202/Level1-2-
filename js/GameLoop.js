@@ -5,7 +5,7 @@ context = canvas.getContext("2d")
 
 player = new GameObject(canvas.width/2, canvas.height/2, 100, 50)
 player.color = "green"
-//player.vx = -5;
+player.vx = -5;
 //player.vy = 5;
 
 
@@ -15,6 +15,7 @@ function animate()
 {
     context.clearRect(0, 0, canvas.width, canvas.height);
 
+    player.move();
     player.drawCircle();
     
 
