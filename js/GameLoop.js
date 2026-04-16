@@ -19,18 +19,22 @@ function animate()
     if (player.x > canvas.width - player.width)
     {
         player.vx *= -1;
+        player.color = "red"
     }
     if (player.x < 0 + player.width/2)
     {
         player.vx = 5;
+        player.color = "blue"
     }
     if (player.y > canvas.height - player.height)
     {
         player.vy *= -1;
+        player.color = "yellow"
     }
     if (player.y < 0 + player.height)
     {
         player.vy = 5;
+        player.color = "blanchedalmond"
     }
 
     player.drawCircle();
