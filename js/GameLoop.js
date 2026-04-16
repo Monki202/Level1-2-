@@ -16,6 +16,16 @@ function animate()
     context.clearRect(0, 0, canvas.width, canvas.height);
 
     player.move();
+
+    if (player.x > canvas.width - player.width)
+    {
+        player.vx *= -1;
+    }
+    if (player.x < 0 + player.width/2)
+    {
+        player.vx = 5;
+    }
+
     player.drawCircle();
     
 
